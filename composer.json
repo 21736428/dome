@@ -1,0 +1,14 @@
+{
+    "name": "mimicode/dome",
+    "description": "some code pice",
+    "type": "project",
+    "license": "Apache2",
+    "authors": [
+        {
+            "name": "zhang",
+            "email": "812377109@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
