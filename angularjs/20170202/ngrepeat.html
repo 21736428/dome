@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../vendor/angularjs/angular.js"></script>
+</head>
+<body ng-controller="body">
+
+{{name}}
+<br>
+<h1>对象遍历</h1>
+
+<ul>
+    <li ng-repeat="(k,v) in data">
+        <p>k:{{k}}</p>
+        <p>$first: {{$first}}</p>
+        <p>$middle:{{$middle}}</p>
+        <p>$last:{{$last}}</p>
+        <p>$even:{{$even}}</p>
+        <p>$odd:{{$odd}}</p>
+         <span ng-bind="v.title"></span>
+         <span ng-bind="v.pinyin"></span>
+    </li>
+</ul>
+
+<h1>数组遍历 track by 唯一键 解决数组中重复值的问题 默认按照v</h1>
+
+<ul>
+    <li ng-repeat="v in nums track by $index">
+        {{v}}
+    </li>
+</ul>
+
+
+
+<script>
+    var m = angular.module("app",[]);
+    m.controller("body",["$scope",function ($scope) {
+       $scope.name="张磊涛"
+        $scope.data=[
+            {"title":"北京","pinyin":"beijing"},
+            {"title":"天津","pinyin":"tianjin"},
+            {"title":"南京","pinyin":"nanjing"},
+            {"title":"深圳","pinyin":"shenzhen"},
+            {"title":"广州","pinyin":"guangzhou"}
+        ];
+       $scope.nums=[
+           1,2,3,4,5,1
+       ]
+
+
+    }])
+
+
+</script>
+</body>
+</html>
