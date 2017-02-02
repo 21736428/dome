@@ -1,10 +1,7 @@
 {
     "name": "mimicode/dome",
-    "description": "code test",
+    "description": "some code pice",
     "type": "project",
-    "require": {
-        "components/angular.js": "*"
-    },
     "license": "Apache2",
     "authors": [
         {
@@ -12,5 +9,6 @@
             "email": "812377109@qq.com"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {}
 }

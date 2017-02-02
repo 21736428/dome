@@ -7,4 +7,3 @@
  */
 
 
-echo print_r("aaaa",true);
