@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <table class="table table-bordered">
+       <tr>
+           <th>姓名</th>
+           <th>年龄</th>
+           <th>身高</th>
+       </tr>
+        <tr>
+            <td>{$zhang['name']}</td>
+            <td>{$zhang.age}</td>
+            <td>{$height}</td>
+        </tr>
+    </table>
+
+    <div class="well">
+        {$smarty.get.info}
+    </div>
+    <p class="text-danger bg-info">
+        <h2>GET,POST,SESSION</h2>
+    </p>
+    <p class="text-danger bg-primary">
+       <h2>常量</h2> {$smarty.const.SMARTY_NAME}
+    </p>
+
+
+    {config_load file='color.conf'}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            从配置文件中读取
+        </div>
+        <div class="panel-body">
+            <p>{$smarty.config.pageTitle}</p>
+        </div>
+    </div>
+
+
+    <ul class="pagination pagination-lg">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+
+    <ul class="pager">
+        <li><a href="#">Previous</a></li>
+        <li><a href="#">Next</a></li>
+    </ul>
+
+
+</div>
+</body>
+</html>

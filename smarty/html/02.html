@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            {foreach $glist as $k=>$v}
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <div class="thumbnail">
+                        <img data-src="3" alt="" src="{$v.img_url}">
+                        <div class="caption">
+                            <h3>{$v.title}</h3>
+                            <p>
+                                Content...
+                            </p>
+                            <p>
+                                <a href="#" class="btn btn-primary">Action</a>
+                                <a href="#" class="btn btn-default">Action</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {/foreach}
+        </div>
+
+
+    </div>
+
+</body>
+</html>

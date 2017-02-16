@@ -1,2 +1,4 @@
 /vendor/
 .idea
+/smarty/html_c/
+/smarty/cache/
