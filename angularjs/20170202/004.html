@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>boostrap-angular</title>
+    <script src="../../vendor/angularjs/angular.js"></script>
+    <link rel="stylesheet" href="../../vendor/twbs/bootstrap/dist/css/bootstrap.css">
+</head>
+<body style="margin: 50px">
+<h1>你好，世界！</h1>
+
+<div class="container" ng-app="app" ng-controller="di">
+    <h1>{{status}}</h1>
+    <table class="table">
+        <tr>
+            <th><input type="checkbox" ng-checked="status" ng-model="status" class="checkbox-inline">全选</th>
+            <th>姓名</th>
+            <th>电话</th>
+            <th>地址</th>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" ng-checked="status"></td>
+            <td>小名</td>
+            <td>1356985462</td>
+            <td>北京那个山</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" ng-checked="status"></td>
+            <td>小名</td>
+            <td>1356985462</td>
+            <td>北京那个山</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" ng-checked="status"></td>
+            <td>小名</td>
+            <td>1356985462</td>
+            <td>北京那个山</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox" ng-checked="status"></td>
+            <td>小名</td>
+            <td>1356985462</td>
+            <td>北京那个山</td>
+        </tr>
+    </table>
+
+
+
+</div>
+
+
+<script>
+    var m = angular.module("app",[]);
+    m.controller("di",["$scope",function ($scope) {
+        $scope.status=true;
+    }]);
+</script>
+</body>
+</html>

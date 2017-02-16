@@ -3,7 +3,10 @@
     "description": "code test",
     "type": "project",
     "require": {
-        "components/angular.js": "*"
+        "components/angular.js": "*",
+        "twbs/bootstrap": "^3.3",
+        "smarty/smarty":"3.1.30",
+        "topthink/thinkphp": "3.2.3"
     },
     "license": "Apache2",
     "authors": [

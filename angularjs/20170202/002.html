@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../vendor/angularjs/angular.js"></script>
+</head>
+<body ng-app="app" ng-controller="ac">
+
+
+<p>ng-selected</p>
+{{city}}
+<p>
+    <select name="" id="" ng-options="v.val as v.name for v in data" ng-model="city">
+        <option value="">请选项</option>
+    </select>
+</p>
+
+
+<p>
+    <select name="a2" id="a2" >
+        <option value="{{v.val}}" ng-repeat="(k,v) in data" ng-selected="v.val==sel">
+            {{v.name}}
+        </option>
+    </select>
+    <input type="text" ng-model="sel">
+</p>
+
+<p><input type="text" ng-model="city" ng-disabled="city=='2'"></p>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+    var m = angular.module("app",[]);
+    m.controller("ac",["$scope",function ($scope) {
+
+        $scope.data=[
+            {"name":"请选择","val":"0"},
+            {"name":"河南","val":"1"},
+            {"name":"湖北","val":"2"},
+            {"name":"东北","val":"3"}
+        ];
+
+
+
+    }])
+
+</script>
+</body>
+</html>
