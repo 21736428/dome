@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<head>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        #showDiv {
+            background-color:red;
+            width:300px;
+            height:300px;
+            display:none;
+        }
+        .from-below,
+        .from-below-to-below .effeckt-modal {
+            -webkit-transform: translateX(100%);
+            -ms-transform: scale(0.5);
+            -o-transform: scale(0.5);
+            transform: scale(0.5);
+            opacity: 0;
+            -webkit-transition: all 500ms;
+            -o-transition: 500ms;
+            transition: 500ms;
+        }
+        .effeckt-show,
+        .effeckt-show.from-below-to-below .effeckt-modal {
+            -webkit-transform: translateX(0);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+            transform: scale(1);
+            opacity: 1;
+        }
+        .effeckt-show .effeckt-modal {
+            visibility: visible;
+        }
+    </style>
+    <script>
+        function show(){
+            $("#showDiv").show();
+            $("#showDiv").addClass("from-below");
+            setTimeout(function(){$("#showDiv").addClass("effeckt-show");},300);
+        }
+        function hide(){
+            $("#showDiv").removeClass("effeckt-show");
+        }
+    </script>
+</head>
+<body class="sapUiBody">
+<input type="button" id="bt" value="show" onClick="show()">
+<input type="button" id="bt" value="hide" onClick="hide()">
+<div id="showDiv" class="">
+    <h1>aaaaa</h1>
+</div>
+</body>
